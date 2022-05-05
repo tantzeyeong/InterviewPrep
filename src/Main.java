@@ -1,15 +1,12 @@
-import ArraysAndStrings.CheckPermutation;
-import ArraysAndStrings.IsUnique;
-import ArraysAndStrings.PalindromePermutation;
-import ArraysAndStrings.URLify;
+import ArraysAndStrings.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(PalindromePermutation.solve("Tact Coa"));
-        System.out.println(PalindromePermutation.solve("My Gym"));
-        System.out.println(PalindromePermutation.solve("red rum sir is murder"));
+        System.out.println(StringCompression.solve("aabbccddd!!"));
+
+
 
 //        char arr[] = {'M', 'r', ' ', 'J', 'o', 'h', 'n', ' ', 'S', 'm', 'i', 't', 'h', ' ', ' ', ' ', ' '};
 //        URLify.solve(arr, 13);
