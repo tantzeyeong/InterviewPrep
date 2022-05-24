@@ -1,5 +1,11 @@
 import ArraysAndStrings.*;
 import LinkedLists.*;
+import StacksAndQueues.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
+import java.util.Stack;
 
 public class Main {
 
@@ -28,16 +34,37 @@ public class Main {
                 {1, 1, 1, 0},
                 {1, 4, 5, 1},
         };
-        Node<Integer> node3 = new Node<>(3, null);
-        Node<Integer> node2 = new Node<>(2, node3);
-        Node<Integer> node1 = new Node<>(1, node2);
-        Node<Integer> node10 = new Node<>(10, null);
-        Node<Integer> node9 = new Node<>(9, node10);
-        Node<Integer> node8 = new Node<>(8, node9);
-        LinkedList<Integer> linkedList1 = new LinkedList<Integer>(node1);
-        LinkedList<Integer> linkedList2 = new LinkedList<Integer>(node2);
-        LinkedList<Integer> linkedList3 = new LinkedList<Integer>(node8);
-        System.out.println(Intersection.solve(linkedList1, linkedList2) == node2);
-        System.out.println(Intersection.solve(linkedList1, linkedList3) == null);
+
+        AnimalShelter animalShelter = new AnimalShelter();
+        Dog dog1 = new Dog("dog1");
+        Dog dog2 = new Dog("dog2");
+        Dog dog3 = new Dog("dog3");
+        Dog dog4 = new Dog("dog4");
+        Dog dog5 = new Dog("dog5");
+        Cat cat1 = new Cat("cat1");
+        Cat cat2 = new Cat("cat2");
+        Cat cat3 = new Cat("cat3");
+        Cat cat4 = new Cat("cat4");
+        Cat cat5 = new Cat("cat5");
+        animalShelter.enqueue(dog1);
+        animalShelter.enqueue(cat5);
+        animalShelter.enqueue(dog2);
+        animalShelter.enqueue(cat4);
+        animalShelter.enqueue(dog3);
+        animalShelter.enqueue(cat3);
+        animalShelter.enqueue(dog4);
+        animalShelter.enqueue(cat2);
+        animalShelter.enqueue(dog5);
+        animalShelter.enqueue(cat1);
+//        for (int i = 0; i < 10; i++) {
+//            System.out.println(animalShelter.dequeueAny().name);
+//        }
+        for (int i = 0; i < 6; i++) {
+            System.out.println(animalShelter.dequeueCat());
+        }
+        for (int i = 0; i < 6; i++) {
+            System.out.println(animalShelter.dequeueDog());
+        }
+        System.out.println(animalShelter.dequeueAny());
     }
 }
