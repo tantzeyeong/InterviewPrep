@@ -6,11 +6,7 @@ import TreesAndGraphs.RouteBetweenNodes;
 
 import java.sql.Array;
 import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class Main {
 
@@ -116,58 +112,77 @@ public class Main {
 //        BST<Integer> bst = new BST<>(node0);
 //        System.out.println(CheckBalanced.solve(bst));
 //        System.out.println(ValidateBST.solve(bst));
-        NodeWithParent<Integer> node0 = new NodeWithParent<>(0);
-        NodeWithParent<Integer> node1 = new NodeWithParent<>(1);
-        NodeWithParent<Integer> node2 = new NodeWithParent<>(2);
-        NodeWithParent<Integer> node3 = new NodeWithParent<>(3);
-        NodeWithParent<Integer> node4 = new NodeWithParent<>(4);
-        NodeWithParent<Integer> node5 = new NodeWithParent<>(5);
-        NodeWithParent<Integer> node6 = new NodeWithParent<>(6);
-        NodeWithParent<Integer> node7 = new NodeWithParent<>(7);
-        NodeWithParent<Integer> node8 = new NodeWithParent<>(8);
-        NodeWithParent<Integer> node9 = new NodeWithParent<>(9);
-        NodeWithParent<Integer> node10 = new NodeWithParent<>(10);
-        NodeWithParent<Integer> node11 = new NodeWithParent<>(11);
-        NodeWithParent<Integer> node12 = new NodeWithParent<>(12);
 
+//        NodeWithParent<Integer> node0 = new NodeWithParent<>(0);
+//        NodeWithParent<Integer> node1 = new NodeWithParent<>(1);
+//        NodeWithParent<Integer> node2 = new NodeWithParent<>(2);
+//        NodeWithParent<Integer> node3 = new NodeWithParent<>(3);
+//        NodeWithParent<Integer> node4 = new NodeWithParent<>(4);
+//        NodeWithParent<Integer> node5 = new NodeWithParent<>(5);
+//        NodeWithParent<Integer> node6 = new NodeWithParent<>(6);
+//        NodeWithParent<Integer> node7 = new NodeWithParent<>(7);
+//        NodeWithParent<Integer> node8 = new NodeWithParent<>(8);
+//        NodeWithParent<Integer> node9 = new NodeWithParent<>(9);
+//        NodeWithParent<Integer> node10 = new NodeWithParent<>(10);
+//        NodeWithParent<Integer> node11 = new NodeWithParent<>(11);
+//        NodeWithParent<Integer> node12 = new NodeWithParent<>(12);
+//
+//
+//        node9.left = node1;
+//        node1.parent = node9;
+//
+//        node1.left = node0;
+//        node0.parent = node1;
+//
+//        node1.right = node4;
+//        node4.parent = node1;
+//
+//        node4.left = node3;
+//        node3.parent = node4;
+//
+//        node4.right = node6;
+//        node6.parent = node4;
+//
+//        node3.left = node2;
+//        node2.parent = node3;
+//
+//        node6.left = node5;
+//        node5.parent = node6;
+//
+//        node6.right = node7;
+//        node7.parent = node6;
+//
+//        node7.right = node8;
+//        node8.parent = node7;
+//
+//        node9.right = node11;
+//        node11.parent = node9;
+//
+//        node11.left = node10;
+//        node10.parent = node11;
+//
+//        node11.right = node12;
+//        node12.parent = node11;
+//
+//
+//        System.out.println(Successor.solve(node12));
 
-        node9.left = node1;
-        node1.parent = node9;
+        List<List<Integer>> adjacencyList = new ArrayList<>(5);
+        List<Integer> node0 = Arrays.asList(2, 4);
+        List<Integer> node1 = Arrays.asList(2);
+        List<Integer> node2 = Arrays.asList();
+        List<Integer> node3 = Arrays.asList(0, 1);
+        List<Integer> node4 = Arrays.asList(2);
 
-        node1.left = node0;
-        node0.parent = node1;
-
-        node1.right = node4;
-        node4.parent = node1;
-
-        node4.left = node3;
-        node3.parent = node4;
-
-        node4.right = node6;
-        node6.parent = node4;
-
-        node3.left = node2;
-        node2.parent = node3;
-
-        node6.left = node5;
-        node5.parent = node6;
-
-        node6.right = node7;
-        node7.parent = node6;
-
-        node7.right = node8;
-        node8.parent = node7;
-
-        node9.right = node11;
-        node11.parent = node9;
-
-        node11.left = node10;
-        node10.parent = node11;
-
-        node11.right = node12;
-        node12.parent = node11;
-
-
-        System.out.println(Successor.solve(node12));
+        adjacencyList.add(node0);
+        adjacencyList.add(node1);
+        adjacencyList.add(node2);
+        adjacencyList.add(node3);
+        adjacencyList.add(node4);
+//        adjacencyList.add(node5);
+        List<Integer> res = BuildOrder.solve(adjacencyList);
+        for (int i = 0; i < res.size(); i++) {
+            System.out.println(res.get(i));
+        }
     }
 }
