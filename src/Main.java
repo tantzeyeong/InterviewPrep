@@ -167,22 +167,55 @@ public class Main {
 //
 //        System.out.println(Successor.solve(node12));
 
-        List<List<Integer>> adjacencyList = new ArrayList<>(5);
-        List<Integer> node0 = Arrays.asList(2, 4);
-        List<Integer> node1 = Arrays.asList(2);
-        List<Integer> node2 = Arrays.asList();
-        List<Integer> node3 = Arrays.asList(0, 1);
-        List<Integer> node4 = Arrays.asList(2);
+//        List<List<Integer>> adjacencyList = new ArrayList<>(5);
+//        List<Integer> node0 = Arrays.asList(2, 4);
+//        List<Integer> node1 = Arrays.asList(2);
+//        List<Integer> node2 = Arrays.asList();
+//        List<Integer> node3 = Arrays.asList(0, 1);
+//        List<Integer> node4 = Arrays.asList(2);
+//
+//        adjacencyList.add(node0);
+//        adjacencyList.add(node1);
+//        adjacencyList.add(node2);
+//        adjacencyList.add(node3);
+//        adjacencyList.add(node4);
+////        adjacencyList.add(node5);
+//        List<Integer> res = BuildOrder.solve(adjacencyList);
+//        for (int i = 0; i < res.size(); i++) {
+//            System.out.println(res.get(i));
+//        }
+//    }
+        Node<Integer> node0 = new Node<>(0);
+        Node<Integer> node1 = new Node<>(1);
+        Node<Integer> node2 = new Node<>(2);
+        Node<Integer> node3 = new Node<>(3);
+        Node<Integer> node4 = new Node<>(4);
+        Node<Integer> node5 = new Node<>(5);
+        Node<Integer> node6 = new Node<>(6);
+        Node<Integer> node7 = new Node<>(7);
+        Node<Integer> node8 = new Node<>(8);
+        Node<Integer> node9 = new Node<>(9);
+        Node<Integer> node10 = new Node<>(10);
 
-        adjacencyList.add(node0);
-        adjacencyList.add(node1);
-        adjacencyList.add(node2);
-        adjacencyList.add(node3);
-        adjacencyList.add(node4);
-//        adjacencyList.add(node5);
-        List<Integer> res = BuildOrder.solve(adjacencyList);
-        for (int i = 0; i < res.size(); i++) {
-            System.out.println(res.get(i));
-        }
+
+        node0.left = node1;
+        node0.right = node2;
+
+        node1.left = node3;
+        node1.right = node4;
+
+        node2.left = node5;
+        node2.right = node6;
+
+        node3.right = node9;
+
+        node4.left = node7;
+        node4.right = node8;
+
+        node7.left = node10;
+
+
+
+        System.out.println(FirstCommonAncestor.solve(node0, node10, node10));
     }
 }
