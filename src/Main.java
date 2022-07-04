@@ -1,6 +1,7 @@
 import ArraysAndStrings.*;
 //import LinkedLists.*;
 import RecursionAndDynamicProgramming.PowerSet;
+import RecursionAndDynamicProgramming.RecursiveMultiply;
 import RecursionAndDynamicProgramming.RobotInAGrid;
 import RecursionAndDynamicProgramming.TripleStep;
 import StacksAndQueues.*;
@@ -258,11 +259,13 @@ public class Main {
 //            System.out.println();
 //        }
 
-        List<Integer> test = Arrays.asList(1, 2, 3, 4);
+//        List<Integer> test = Arrays.asList(1, 2, 3, 4);
+//
+//        List<List<Integer>> ans = PowerSet.solve(test);
+//        for (int i = 0; i < ans.size(); i++) {
+//            System.out.println(ans.get(i).toString());
+//        }
 
-        List<List<Integer>> ans = PowerSet.solve(test);
-        for (int i = 0; i < ans.size(); i++) {
-            System.out.println(ans.get(i).toString());
-        }
+        System.out.println(RecursiveMultiply.solve(15, 15));
     }
 }
